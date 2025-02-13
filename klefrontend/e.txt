@@ -1,0 +1,49 @@
+ "Docker ve Laravel kullanarak, ""kleapi"" ve ""klefrontend"" isimli iki proje oluşturulacaktır.
+  İlk projede (kleapi), 2. Aşama'da belirtilen kuralların aynısı
+  , ""api.pHp"" dosyasına uygun olarak eklenmelidir.
+  Ayrıca, test etmek için POSTMAN uygulaması kullanılacaktır
+  İkinci projede (klefrontend),tarafında kullanıcı giriş kullanıcı kayıt olması bekleniyor responsive bir tasarım yapılacak ve listeleme işlevleri ilk projeye (kleapi)
+  HTTP Client yardımıyla istek atılarak gerçekleştirilecektir.
+  AutH işlemleri için token kullanılmasını bekliyoruz."
+
+
+ ______________________________
+|php artisan serve --port=8001_|
+|______________________________|
+
+
+"Bu aşamadan sonraki Her projenin Her sayfasının responsive olmasını bekliyoruz.
+ Bu aşamada Docker ile birlikte ""kle"" isimli bir Laravel projesi oluşturulacaktır. Proje, CRUD, Login ve Sign Up işlemlerini içermelidir.
+ • Kayıt olmak isteyen kullanıcılardan şu bilgiler zorunlu olarak istenecektir:
+ • İsim Soyisim (required, full name)  $username = $_GET["username"];
+ • Email (required, unique, email)  $email = $_GET["email"];
+ • Şifre (required, password)  $password = $_GET["password"];
+ • Şifre Tekrarı (required, password_confirmation)  $confirm_password = $_GET["confirm_password"];
+ • Login olmak isteyen kullanıcılar ise aşağıdaki bilgileri zorunlu olarak girecektir:
+ • Email (required, unique, email) $email = $_GET["email"];
+ • Şifre (required, password) $password = $_GET["password"];
+ • Login sonrasında kullanıcı otomatik olarak anasayfaya yönlendirilecektir. Sadece giriş yapmış kullanıcılar bu sayfada veri görebilecek. Giriş yapmadan anasayfaya ulaşmaya çalışan bir kullanıcıya """"Verileri görmek için giriş yapmalısınız"""" uyarısı verilecektir. Sadece giriş yapan kullanıcılar, anasayfada verileri görebilecek ve CRUD işlemlerini gerçekleştirebilecektir.
+ • Anasayfa, ürünlerin listelendiği bir sayfa olacaktır.
+ • Create işlemi yapmak isteyen kullanıcı aşağıdaki verileri girmek zorundadır:
+ • Ürün Adı (required, product_name) $urun_adı = $_GET['urun_adı'];
+ • Ürün Fiyatı (required, product_price)  $urun_fiyatı = $_GET['urun_fiyatı'];
+ • Ürün Açıklaması (required, description)   $urun_açıklaması = $_GET['urun_açıklaması'];
+ • Giriş yapmış kullanıcılar bütün CRUD işlemlerini gerçekleştirebilir.
+ • Her ürünün kendisine özel bir detay/inceleme sayfası olacaktır ve CRUD işlemleri bu sayfa üzerinden gerçekleşecektir.
+ • Projemiz genel Hatlarıyla bu şekilde olacaktır.
+ • INSERT INTO products (urun_adı, urun_fiyatı, urun_açıklaması) giriş ve kayıt işlemleri için users
+ • Akademide bulunan öğrenci bu projede PHP'ye genel anlamda giriş yapmış olacak. Temel kullanımda ifelse, for döngüsünü kullanmak zorunda olacak."""
+
+
+
+"Docker ve Laravel kullanarak, ""kleapi"" ve ""klefrontend"" isimli iki proje oluşturulacaktır.
+ İlk projede (kleapi), 2. Aşama'da belirtilen kuralların aynısı, ""api.pHp"" dosyasına uygun olarak eklenmelidir. Ayrıca, test etmek için POSTMAN uygulaması kullanılacaktır.
+ İkinci projede (klefrontend), responsive bir tasarım yapılacak ve listeleme işlevleri ilk projeye (kleapi) HTTP Client yardımıyla istek atılarak gerçekleştir                                                              r."
+
+
+
+
+
+
+
+

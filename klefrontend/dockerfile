@@ -1,0 +1,19 @@
+# Node.js ve frontend için temel Docker imajı
+FROM php:8.2-fpm
+
+# Çalışma dizinini oluştur
+WORKDIR /var/www/html
+
+# # Bağımlılıkları yükle
+# COPY package.json package-lock.json /var/www/html/
+# COPY package.json /var/www/html/
+# RUN npm install
+
+# Kaynak kodlarını kopyala
+COPY . /var/www/html/
+
+# Uygulamayı başlat
+CMD ["php-fpm"]
+
+# Varsayılan olarak 3000 portunu aç
+EXPOSE 3000

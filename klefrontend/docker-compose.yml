@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: .
+    image: klefrontend
+    container_name: klefrontend
+    ports:
+      - "8080:8000"
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    networks:
+      - laravel-network
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+networks:
+  laravel-network:
+    driver: bridge
+    external: true
+
+
+

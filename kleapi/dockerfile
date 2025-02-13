@@ -1,0 +1,19 @@
+FROM php:8.2-fpm
+
+# Çalışma dizinini ayarla
+WORKDIR /var/www
+
+# Gerekli PHP uzantılarını yükle
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Composer'ı yükle
+COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
+
+# Laravel uygulamasını kopyala
+COPY . /var/www/html
+
+# Gerekli izinleri ayarla
+RUN chown -R www-data:www-data /var/www
+
+CMD ["php-fpm"]
+
